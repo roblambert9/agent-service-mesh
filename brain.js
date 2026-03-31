@@ -28,3 +28,22 @@ async function updateGlobalState() {
 }
 
 setInterval(updateGlobalState, 60000); // 60s Heartbeat
+// --- THE RECURSIVE GAS TANK & METABOLISM ---
+async function maintainMetabolism() {
+    console.log("[SYSTEM] Checking Sovereign Metabolism...");
+    // In production, this pulls from Firebase 'revenue' collection
+    const simulatedRevenue = 15.00; // USDC
+
+    if (simulatedRevenue > 10.00) {
+        console.log("[EXECUTE] Metabolism Triggered: Converting Profit to Power.");
+        console.log(" -> Allocating 1 USDC to Infrastructure (Railway).");
+        console.log(" -> Swapping 2 USDC to ETH for Agent 16 Gas.");
+        console.log(" -> Routing 7 USDC to Mexico 2030 Cold Storage.");
+        
+        // This is where Composio handles the actual Base network swaps
+        // await toolset.executeAction("uniswap_swap", { ... });
+    }
+}
+
+// Run metabolism check every hour
+setInterval(maintainMetabolism, 3600000);
