@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Mexico 2030 Sovereign Agent Gateway",
   "main": "gateway.js",
+  "engines": {
+    "node": ">=20.18.0"
+  },
   "scripts": {
     "start": "node gateway.js",
     "brain": "node brain.js",
